@@ -13,3 +13,10 @@ if (sum === 153) {
 } else {
     console.log("false");
 }
+
+
+// function num(num1, num2){
+//     return num1 + num2
+// }
+
+// console.log(num(5,6))
