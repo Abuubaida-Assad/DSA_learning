@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    input {
+        width: 300px;
+        height: 30px;
+        padding: 5px;
+        font-size: 16px;
+    }
+    button {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    </style>
+     
+    
+</head>
+<body>
+    <h1>Todo List</h1>
+
+    <div class="input-area">
+        <input type="text" id="input" placeholder="Add todo...">
+        <button onclick="addTodo()">+</button>
+    </div>
+
+    <div id="list"></div>
+</body>
+<script>
+     var todos = [
+            { id: 1, text: "todo-1" },
+            { id: 2, text: "todo-2" }
+        ];
+
+        function showTodos() {
+            var html = "";
+
+            for (var i = 0; i < todos.length; i++) {
+                html += `
+                    <div class="todo">
+                        <span>${todos[i].text}</span>
+                        <div class="btn-group">
+                            
+                            
+                        </div>
+                    </div>
+                `;
+            }
+
+            document.getElementById("list").innerHTML = html;
+        }
+        addTodo = () => {
+            var input = document.getElementById("input");
+            var text = input.value.trim();
+
+            if (text !== "") {
+                var newTodo = {
+                    id: todos.length + 1,
+                    text: text
+                };
+
+                todos.push(newTodo);
+                input.value = "";
+                showTodos();
+            }
+        };
+        
+ 
+</script>
+</html>

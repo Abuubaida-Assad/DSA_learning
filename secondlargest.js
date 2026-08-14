@@ -14,3 +14,25 @@ for (let i = 0; i < arr.length; i++) {
 console.log(secondLargest);
 
 
+let arr = [12, 35, 1, 10, 34, 1];
+let largest = 0;  
+let secondLargest= -1;
+let thirdLargest = -1;
+
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] > largest) {
+    thirdLargest = secondLargest; 
+    secondLargest = largest;
+
+    largest = arr[i];
+  } else if (arr[i] > secondLargest && arr[i] !== largest) {
+    thirdLargest = secondLargest;
+    secondLargest = arr[i];
+  }else if (arr[i] > thirdLargest && arr[i] 
+    !== secondLargest 
+    && arr[i] !== largest) {
+    thirdLargest = arr[i];
+  }
+}
+
+console.log(thirdLargest);
