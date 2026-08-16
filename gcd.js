@@ -12,3 +12,4 @@ function GCD(N1, N2) {
 }
 
 console.log(GCD(48, 18));
+
