@@ -103,19 +103,58 @@
 // }
 // console.log(arr);    
 
-let arr = [4,8,1,6,3,9,12,5,7];
+// let arr = [4,8,1,6,3,9,12,5,7];
 
 
 
-let target = 14;
-let map = new Map();
+// let target = 14;
+// let map = new Map();
 
-for (let i=0; i<arr.length; i++){
-    let complement = target - arr[i];
-    if (map.has(complement)){
-        console.log(` (${arr[i]}, ${complement})`);
-    }
-    map.set(arr[i], i);
-}
+// for (let i=0; i<arr.length; i++){
+//     let complement = target - arr[i];
+//     if (map.has(complement)){
+//         console.log(` (${arr[i]}, ${complement})`);
+//     }
+//     map.set(arr[i], i);
+// }
+
+
+// let arr = [4,8,1,6,3,9,12,5,7];
+
+
+// let largest = 0;
+// let smallest = 0;
+// for (let i=1; i<arr.length; i++){
+//     if (arr[i] >largest){
+//         largest = arr[i];
+
+//     }
+
+//     if (arr[i] <smallest){
+//         smallest = arr[i];
+//     }
+// }
+
+
+
+
+ 
+// for (let i=1; i<=4; i++){
+//     let n = "";
+//     for (let j=1; j<=i; j++){
+//         n += j + " ";
+//     }
+//     console.log(n);
+// }
+
+
+
+
+
+
+
+
+
+
 
 
