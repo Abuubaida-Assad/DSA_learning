@@ -1,15 +1,36 @@
-function GCD(N1, N2) {
-  N1 = (N1);
-  N2 = (N2);
+function GCD(A, B) {
+  A = (A);
+  B = (B);
 
-  while (N2 !== 0) {
-    const remainder = N1 % N2;
-    N1 = N2;
-    N2 = remainder;
+  while (B !== 0) {
+    const remainder = A % B;
+
+    A = B;
+    B = remainder;
   }
 
-  return N1;
+  return A;
 }
 
+console.log(GCD(48, 18));
+
+module.exports = { 
+ //param A : integer
+ //param B : integer
+ //return an integer
+	gcd : function(A, B){
+    A = (A);
+    B = (B);
+
+    while (B !== 0) {
+      const remainder = A % B;
+      A = B;
+      B = remainder;
+    }
+
+    return A; 
+
+	}
+};
 console.log(GCD(48, 18));
 

@@ -150,11 +150,54 @@
 
 
 
+// let arr = [5, 2, 9, 1, 5, 6];
+// let PrefixSum = 0;
+// for (let i=0; i<arr.length; i++){
+//     PrefixSum += arr[i];
+//     arr[i] = PrefixSum;
+// }
+// console.log(arr);
 
 
 
 
 
+// [15,-2,2,-8,1,7,10,23] find the lenght of teh largest subarray whose sum is 0
+// let arr = [15,-2,2,-8,1,7,10,23]; 
+
+// let maxLength = 0;
+// let prefixSum = 0;
+// let sumMap = new Map();
+// sumMap.set(0, -1); // Initialize with sum 0 at index -1
+
+// for (let i = 0; i < arr.length; i++) {
+//     prefixSum += arr[i];
+//     if (sumMap.has(prefixSum)) {
+//         let length = i - sumMap.get(prefixSum);
+//         if (length > maxLength) {
+//             maxLength = length;
+//         }
+//     } else {
+//         sumMap.set(prefixSum, i);
+//     }
+// }
+
+// console.log(maxLength);
 
 
 
+
+// count digits in a number using and without using math.floor
+
+
+function countDigits(num) {
+    let count = 0;
+    
+    for (let i = 1; num > 0; i++) {
+        num = (num / 10) | 0;
+        count++;
+    }
+    return count;
+}
+
+console.log(countDigits(12345)); // Output: 5

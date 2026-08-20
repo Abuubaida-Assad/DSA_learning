@@ -20,3 +20,19 @@ if (sum === 153) {
 // }
 
 // console.log(num(5,6))
+
+function solution(n) {
+
+  let num = n;
+  let sum = 0;
+
+  while (num > 0) {
+    let lastDigit = num % 10;
+    sum = sum + lastDigit ** 3;
+
+    num = (num - lastDigit) / 10;
+  }
+
+  return sum === n;
+}
+console.log(solution(153)); 
