@@ -14,23 +14,14 @@ function GCD(A, B) {
 
 console.log(GCD(48, 18));
 
-module.exports = { 
- //param A : integer
- //param B : integer
- //return an integer
-	gcd : function(A, B){
-    A = (A);
-    B = (B);
+// All Divisors of a Number using factorization Divisibility can be checked by the remainder. If remainder is 0,  number is divisible
 
-    while (B !== 0) {
-      const remainder = A % B;
-      A = B;
-      B = remainder;
+
+class Solution {
+    getDivisors(n) {
+        // code here
+      
+        
+        
     }
-
-    return A; 
-
-	}
-};
-console.log(GCD(48, 18));
-
+}
