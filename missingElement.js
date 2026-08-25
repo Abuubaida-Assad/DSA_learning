@@ -13,7 +13,7 @@
 // console.log(xor);
 
 
-// let arr = [5,4,1,3,4,3,5,1,2];
+// let arr = [4,];
 // let xor = 0;
 // for (let i = 0; i < arr.length; i++) {
 //     xor = xor ^ arr[i];
