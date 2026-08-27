@@ -134,7 +134,7 @@ for (let i = 0; i < n; i++) {
     for (let j = i + 1; j < n; j++) {
         let temp = matrix[i][j];
         matrix[i][j] = matrix[j][i];
-        
+
         matrix[j][i] = temp;
 
     }
@@ -145,6 +145,63 @@ for (let i = 0; i < n; i++) {
 }
 
 console.log(matrix);
+
+let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+let n = matrix.length;
+
+// Transpose
+for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+        let temp = matrix[i][j];
+        matrix[i][j] = matrix[j][i];
+        matrix[j][i] = temp;
+    }
+}
+
+// Reverse each row
+for (let i = 0; i < n; i++) {
+    matrix[i].reverse();
+}
+
+// Spiral traversal
+let top = 0;
+let bottom = n - 1;
+let left = 0;
+let right = n - 1;
+
+while (top <= bottom && left <= right) {
+
+    // Left → Right
+    for (let j = left; j <= right; j++) {
+        console.log(matrix[top][j]);
+    }
+    top++;
+
+    // Top → Bottom
+    for (let i = top; i <= bottom; i++) {
+        console.log(matrix[i][right]);
+    }
+    right--;
+
+    // Right → Left
+    for (let j = right; j >= left; j--) {
+        console.log(matrix[bottom][j]);
+    }
+    bottom--;
+
+    // Bottom → Top
+    for (let i = bottom; i >= top; i--) {
+        console.log(matrix[i][left]);
+    }
+    left++;
+}
+
+
 
 
 
