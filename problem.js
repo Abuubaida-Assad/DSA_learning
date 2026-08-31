@@ -47,3 +47,43 @@ var isAnagram = function(s, t) {
 
 
 
+
+class Solution {
+    lowerBound(arr, target) {
+        // code here
+        let low = 0;
+        let high = arr.length-1;
+        let ans = arr.length;
+        while(low <= high){
+            let mid = Math.floor((low+high)/2);
+            if(arr[mid]>=target){
+                ans = mid;
+                high = mid-1;
+            }else{
+                low = mid +1;
+            }
+        }
+        return ans;
+    }
+}
+
+class UpperBoundFinder {
+    // Binary search to find upper bound
+    upperBound(arr, x) {
+        let low = 0, high = arr.length - 1;
+        let ans = arr.length; // Default to array length if no upper bound found
+
+        while (low <= high) {
+            const mid = Math.floor((low + high) / 2);
+
+            if (arr[mid] > x) {
+                ans = mid;       // Store current index
+                high = mid - 1;  // Move left
+            } else {
+                low = mid + 1;   // Move right
+            }
+        }
+    }
+}
+
+
